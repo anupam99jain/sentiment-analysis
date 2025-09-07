@@ -6,7 +6,6 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 MAXLEN = 300
 
-# Load model & tokenizer
 model = load_model("sentiment_lstm.h5")
 with open("tokenizer.pkl", "rb") as f:
     tokenizer = pickle.load(f)

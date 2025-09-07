@@ -4,15 +4,12 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-# ---- SETTINGS ----
-MAXLEN = 300  # must match training
+MAXLEN = 300 
 
-# ---- LOAD MODEL & TOKENIZER ----
 model = load_model("sentiment_lstm.h5")
 with open("tokenizer.pkl", "rb") as f:
     tokenizer = pickle.load(f)
 
-# ---- STREAMLIT UI ----
 st.title("🎬 IMDB Movie Review Sentiment")
 st.write("Type or paste a review below and click **Analyze**.")
 
