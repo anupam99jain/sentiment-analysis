@@ -1,5 +1,5 @@
 MAX_WORDS = 20000
-MAXLEN = 300
+MAXLEN = 200
 sample = "The movie was absolutely fantastic, brilliant plot and acting."
 seq = tokenizer.texts_to_sequences([sample])
 padded = pad_sequences(seq, maxlen=MAXLEN, padding='post')
